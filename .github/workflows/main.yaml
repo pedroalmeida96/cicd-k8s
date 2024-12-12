@@ -26,10 +26,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build with Gradle
-        run: ./gradlew test
+        run: ./gradlew clean build
 
       - name: Push image
         run: | 
           docker login --username pedroalmeida96 --password ${{ secrets.GHCR_ACCESS_TOKEN }} ghcr.io
-#          docker build . --tag ghcr.io/pedroalmeida96/cicd-k8s:latest
-#          docker push ghcr.io/pedroalmeida96/cicd-k8s:latest
+          docker build . --tag ghcr.io/pedroalmeida96/cicd-k8s:latest
+          docker push ghcr.io/pedroalmeida96/cicd-k8s:latest
