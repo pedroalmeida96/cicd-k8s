@@ -1,4 +1,4 @@
 # Getting Started
 
 ## Links
-* [GitHub marketplace](https://github.com/marketplace)
+* [GitHub Marketplace](https://github.com/marketplace)
