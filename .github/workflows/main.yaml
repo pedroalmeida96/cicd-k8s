@@ -1,6 +1,8 @@
 name: Build & deploy Spring Boot app
 
 on:
+  push:
+    - master
   pull_request:
     branches:
       - master
