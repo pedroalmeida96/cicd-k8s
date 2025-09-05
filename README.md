@@ -25,6 +25,11 @@ Welcome! This project demonstrates:
 - `helm/` — Helm charts for Kubernetes deployment
 
 ## 🚀 Deploy to Minikube
+
+> **Note to self:** This setup assumes the Helm chart does not require private credentials or image pull secrets.  
+> If deployment needs credentials (e.g., for private container registries), I must configure them in the Helm chart or Kubernetes cluster.  
+> This guide does not cover credential setup.
+
 ```bash
 
 minikube start
