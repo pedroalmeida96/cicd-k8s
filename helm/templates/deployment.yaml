@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cicd-k8s
+  labels:
+    app: cicd-k8s
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: cicd-k8s
+  template:
+    metadata:
+      labels:
+        app: cicd-k8s
+    spec:
+      containers:
+        - name: cicd-k8s
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 80
